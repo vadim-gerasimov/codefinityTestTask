@@ -33,7 +33,7 @@ func format(output string, _, _ bool) string {
 func main() {
 	input, err := io.ReadAll(os.Stdin)
 	if err != nil {
-		log.Fatal(fmt.Errorf("input: io.ReadAll: %v", err))
+		log.Fatal(fmt.Errorf("input: io.ReadAll: %w", err))
 	}
 	n, err := strconv.Atoi(string(input))
 	if err != nil {
